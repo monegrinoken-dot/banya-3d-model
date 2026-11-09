@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Модульная баня 6 × 2,5 — 3D-модель</title>
+<style>
+  :root{
+    --bg:#141312; --panel:#1d1b19; --line:#33302b; --text:#e8e3da; --muted:#9a9184;
+    --accent:#d9a05b; --accent2:#8fb3c7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.6}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header{padding:28px 0 8px;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--accent);letter-spacing:.35em;font-size:12px;text-transform:uppercase}
+  h1{font-size:clamp(26px,4vw,42px);font-weight:600;margin:10px 0 4px}
+  .sub{color:var(--muted);font-size:15px}
+  .viewer-card{margin:28px 0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  #stage{position:relative;height:min(62vh,560px);background:radial-gradient(120% 100% at 50% 0%,#242a30 0%,#15181b 70%)}
+  #stage canvas{display:block}
+  #loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;letter-spacing:.1em}
+  .presets{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px;border-top:1px solid var(--line)}
+  .presets button{background:#262320;color:var(--text);border:1px solid var(--line);border-radius:999px;
+    padding:7px 14px;font-size:13px;cursor:pointer;transition:.15s}
+  .presets button:hover{border-color:var(--accent);color:var(--accent)}
+  .presets button.active{background:var(--accent);color:#1a1512;border-color:var(--accent)}
+  .hint{padding:0 16px 14px;color:var(--muted);font-size:12px}
+  section{margin:44px 0}
+  h2{font-size:22px;font-weight:600;margin-bottom:14px;color:var(--accent)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .stat b{display:block;font-size:22px;color:var(--text)}
+  .stat span{color:var(--muted);font-size:13px}
+  .materials{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+  .materials div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px}
+  .materials div::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--accent);margin-right:8px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .gallery figure{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .gallery img{width:100%;display:block}
+  .gallery figcaption{padding:10px 14px;font-size:13px;color:var(--muted)}
+  .downloads{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .dl{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+    color:var(--text);text-decoration:none;transition:.15s}
+  .dl:hover{border-color:var(--accent)}
+  .dl b{display:block;margin-bottom:4px}
+  .dl span{color:var(--muted);font-size:13px}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding:22px 0 34px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">6 × 2,5 BANYA / MODULE</div>
+    <h1>Модульная баня 6 × 2,5 — 3D-модель</h1>
+    <div class="sub">Интерактивная модель по планировке заказчика · масштаб 1:1 · метры</div>
+  </header>
+
+  <div class="viewer-card">
+    <div id="stage"><div id="loader">Загружаем геометрию…</div></div>
+    <div class="presets" id="presets"></div>
+    <div class="hint">Вращение — левая кнопка мыши · масштаб — колесо · сдвиг — правая кнопка. Виды «Комната отдыха / Душевая / Парная / Сверху» временно скрывают кровлю.</div>
+  </div>
+
+  <section>
+    <h2>Модель по вашему плану</h2>
+    <p>Модульная баня <b>6000 × 2500 мм</b> с тремя помещениями под одной плоской кровлей: комната отдыха с Г-образной лавкой,
+    душевая и парная с двухъярусными полоками и печью-каменкой. Южный фасад — панорамное остекление и выход на крытую террасу
+    с дровником. Модель стоит на винтовых опорах, участок покрыт снегом — как в зимних референсах.</p>
+    <div class="stats">
+      <div class="stat"><b>6,0 × 2,5 м</b><span>габарит корпуса</span></div>
+      <div class="stat"><b>2,4 м</b><span>высота потолков</span></div>
+      <div class="stat"><b>3 помещения</b><span>отдых · душевая · парная</span></div>
+      <div class="stat"><b>7,6 м</b><span>терраса во всю длину</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Материалы и конструкция</h2>
+    <div class="materials">
+      <div>Вертикальная доска фасада, тёмная</div>
+      <div>Панорамные окна в чёрном алюминии</div>
+      <div>Плоская мембранная кровля</div>
+      <div>Вагонка липа — стены, абаш — полоки</div>
+      <div>Палубная доска террасы</div>
+      <div>Печь-каменка с камнями габбро</div>
+      <div>Винтовые опоры, стальной цоколь</div>
+      <div>LED-подсветка полоков и бра на фасаде</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Рендеры</h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section>
+    <h2>Скачать файлы</h2>
+    <div class="downloads">
+      <a class="dl" id="dl-glb" href="#"><b>3D-модель GLB ↓</b><span>метры · материалы · 511 КБ — прямо с этой страницы</span></a>
+      <a class="dl" href="https://gofile.io/d/gaH1Bc2w" target="_blank" rel="noopener"><b>DXF для AutoCAD ↗</b><span>R2010 · миллиметры · слои по помещениям</span></a>
+      <a class="dl" href="https://gofile.io/d/gaH1Bc2w" target="_blank" rel="noopener"><b>FBX / STL ↗</b><span>для 3ds Max, SketchUp, 3D-печати</span></a>
+      <a class="dl" href="https://github.com/monegrinoken-dot/banya-3d-model" target="_blank" rel="noopener"><b>Репозиторий проекта ↗</b><span>описание и скрипт-генератор модели</span></a>
+    </div>
+  </section>
+
+  <footer>
+    Модель собрана в метрической системе. GLB совместим с Blender, SketchUp, Twinmotion, Windows 3D Viewer и онлайн-просмотрщиками (3dviewer.net).
+    DXF открывается в AutoCAD: File → Open.
+  </footer>
+</div>
+
+<script src="./bundle.js"></script>
+</body>
+</html>
