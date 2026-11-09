@@ -158,10 +158,10 @@ def wallZ(mt, z0, z1, x, y0=WB, y1=WT, t=T, openings=(), c=C_BANYA, name='Сте
         if o['y0'] > y0:
             box(f'{name}.{i}', mt, t, o['y0'] - y0, o['z1'] - o['z0'], x, (y0 + o['y0']) / 2, (o['z0'] + o['z1']) / 2, c); i += 1
         if o['y1'] < y1:
-            box(f'{name}.{i}', mt, t, y1 - o['y1'], o['z1'] - o['z0'], x, (y0 + y1) / 2, (o['y1'] + y1) / 2, z, c); i += 1
+            box(f'{name}.{i}', mt, t, y1 - o['y1'], o['z1'] - o['z0'], x, (o['y1'] + y1) / 2, (o['z0'] + o['z1']) / 2, c); i += 1
         cur = max(cur, o['z1'])
     if cur < z1:
-        box(f'{name}.{i}', mt, t, y1 - y0, z1 - cur, x, (y0 + y1) / 2, (y0 + y1) / 2, z, c)
+        box(f'{name}.{i}', mt, t, y1 - y0, z1 - cur, x, (y0 + y1) / 2, (cur + z1) / 2, c)
 
 def windowX(x0, x1, y0, y1, z, t=T, sill=True, name='Окно', c=C_BANYA):
     w = x1 - x0; h = y1 - y0; cx = (x0 + x1) / 2; cy = (y0 + y1) / 2; f = 0.055
